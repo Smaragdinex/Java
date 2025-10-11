@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int days = sc.nextInt();
+		
+		if(days > 0 && days < 6)
+		{
+			System.out.println("This is working day");
+		}
+		else if(days == 6)
+		{
+			System.out.println("Happy Saturday");
+		}
+		else if(days == 7)
+		{
+			System.out.println("Lazy Sunday");
+		}
+		else
+		{
+			System.out.println("Input Error");
+		}
+		
+		sc.close();
+	}
+}
