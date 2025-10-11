@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		
+		String s = ( (x <= 100 && x >= 0) && (y <= 100 && y >= 0)) ? "inside" : "outside";
+		
+		System.out.println(s);
+		
+		sc.close();
+	}
+}
