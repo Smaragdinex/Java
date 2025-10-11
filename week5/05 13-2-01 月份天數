@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int month = sc.nextInt();
+		
+		String s = switch(month){
+			case 1,3,5,7,8,10,12 -> "There are 31 days in month " + month;
+			case 4,6,9,11 -> "There are 30 days in month " + month;
+			case 2 -> "in month " + month + ", there are 29 days in the leap year and 28 days in non-leap year.";
+			default -> month + "is not a correct month";
+		};
+		
+		System.out.println(s);
+		
+		sc.close();
+	}
+}
