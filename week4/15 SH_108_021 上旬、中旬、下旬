@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int days = sc.nextInt();
+		
+		String s = switch(days){
+			case 1,2,3,4,5,6,7,8,9,10 -> "Early";
+			case 11,12,13,14,15,16,17,18,19,20 -> "Mid-term";
+			case 21,22,23,24,25,26,27,28,29,30,31 -> "Late";
+			default -> "Input Error";
+		};
+		
+		System.out.println(s);
+		
+		sc.close();
+	}
+}
