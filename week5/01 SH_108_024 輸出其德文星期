@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int days = sc.nextInt();
+		
+		String s = switch(days){
+			case 1 -> "Montag";
+			case 2 -> "Dienstag";
+			case 3 -> "Mittwoch";
+			case 4 -> "Donnestag";
+			case 5 -> "Freitag";
+			case 6 -> "Samstag";
+			case 7 -> "Sonntag";
+			default -> "Input Error";
+		};
+		
+		System.out.println(s);
+		
+		sc.close();
+	}
+}
