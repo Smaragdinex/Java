@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		
+		double sum = n * 1.094;
+		
+		System.out.println(sum);
+		
+		sc.close();
+	}
+}
