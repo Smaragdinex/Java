@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		long a = sc.nextLong();
+		
+		long totalSecond = a;
+		
+		long days = totalSecond / (24 * 3600);
+		totalSecond %= (24 * 3600);
+		
+		long hours = totalSecond / 3600;
+		totalSecond %= 3600;
+		
+		long minutes = totalSecond / 60;
+		long seconds = totalSecond % 60;
+		
+		System.out.println(a + " = " + days + " days, " + hours + " hours, " + minutes + " minutes, "
+		+ seconds +  " seconds");
+		
+		
+	}
+}
