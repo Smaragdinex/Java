@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[] coins = {25,10,5,3,1};
+		
+		int n = sc.nextInt();
+		
+		int amount = n;
+		
+		System.out.print(n + " =");
+		
+		for(int i =0; i < coins.length; i++)
+		{
+			int count = amount / coins[i];
+			amount %= coins[i];
+			
+			System.out.print(count + "x" + coins[i] + " dollar");
+			
+			if(i < coins.length - 1)
+				System.out.print(", ");
+		}
+		System.out.println();
+		
+		sc.close();
+	}
+}
