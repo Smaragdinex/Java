@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		double h = sc.nextDouble();
+		
+		double w = sc.nextDouble();
+		
+		double result = w / Math.pow(h, 2);
+		
+		System.out.println(result);
+		System.out.printf("bmi is %.3f", result);
+	}
+}
