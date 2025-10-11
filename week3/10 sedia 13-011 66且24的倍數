@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		String s = (num % 66 == 0 && num % 24 ==0) ? "1" : "0";
+		
+		System.out.print(s);
+		
+		sc.close();
+		
+		
+	}
+}
