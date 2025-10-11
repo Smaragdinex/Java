@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		int oddSum = 0;
+		int evenSum = 0;
+		
+		int a = num %10;
+		num /= 10;
+		int b = num %10;
+		num /= 10;
+		int c = num %10;
+		num /= 10;
+		int d = num %10;
+		
+		oddSum = a + c;
+		evenSum = b + d;
+		
+		System.out.println(oddSum - evenSum);
+	}
+}
