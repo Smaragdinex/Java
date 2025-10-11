@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int month = sc.nextInt();
+		int day = sc.nextInt();
+		
+		String zodiac = switch(month){
+			case 1 -> (day < 22) ? "Capricorn" : "Aquarius";
+			case 2 -> (day < 20) ? "Aquarius" : "Pisces";
+			case 3 -> (day < 22) ? "Pisces" : "Aries";
+			case 4 -> (day < 21) ? "Aries" : "Taurus";
+			case 5 -> (day < 22) ? "Taurus" : "Gemini";
+			case 6 -> (day < 22) ? "Gemini" : "Cancer";
+			case 7 -> (day < 23) ? "Cancer" : "Leo";
+			case 8 -> (day < 24) ? "Leo" : "Virgo";
+			case 9 -> (day < 24) ? "Virgo" : "Libra";
+			case 10 -> (day < 24) ? "Libra" : "Scorpio";
+			case 11 -> (day < 23) ? "Scorpio" : "Sagittarius";
+			case 12 -> (day < 22) ? "Sagittarius" : "Capricorn";
+			default -> "Input Error";
+		};
+		
+		System.out.println(zodiac);
+		
+		sc.close();
+		
+		
+	}
+}
