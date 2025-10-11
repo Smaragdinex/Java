@@ -1,0 +1,25 @@
+import java.util.*;
+public class main{
+    public static void main(String args[]){
+    	Scanner in = new Scanner(System.in);
+    	
+    	int a,b,c,t;
+    	a=in.nextInt();
+    	b=in.nextInt();
+    	c=in.nextInt();
+    	
+    	if(a>b) {t=a; a=b; b=t;}	
+    	if(b>c) {t=b; b=c; c=t;}	
+    	if(a>b) {t=a; a=b; b=t;}
+    	
+    	if(a+b<=c) System.out.println("not a triangle");
+        else {
+    	if(a==c && b==c) System.out.println("regular triangle");
+    	if((a==b) && (a*a+b*b==c*c)) System.out.println("isosceles righttriangle");
+    	if(a==b || b==c) System.out.println("isosceles triangle");
+    	if(a*a+b*b==c*c) System.out.println("rectangular triangle");
+    	if(a*a+b*b<c*c) System.out.println("obtuse triangle");
+    	if(a*a+b*b>c*c) System.out.println("acute triangle");
+        }
+    }
+ }
