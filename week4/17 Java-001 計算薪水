@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int hours = sc.nextInt();
+		int salary = sc.nextInt();
+		
+		double total = 0.0;
+		
+		if(hours <= 60)
+		{
+			total = hours * salary * 1.0;
+		}
+		else if( hours <= 120)
+		{
+			total = 60 * salary + (hours - 60) * salary * 1.33;
+		}
+		else
+		{
+			total = 60 * salary + 60 * salary * 1.33 + (hours - 120) * salary * 1.66;
+		}
+		
+		System.out.printf("%.2f", total);
+		
+		sc.close();
+	}
+}
