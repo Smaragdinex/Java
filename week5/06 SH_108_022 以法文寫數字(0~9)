@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		String s = switch(num){
+			case 0 -> "zero";
+			case 1 -> "un";
+			case 2 -> "deux";
+			case 3 -> "trois";
+			case 4 -> "quatre";
+			case 5 -> "cinq";
+			case 6 -> "six";
+			case 7 -> "sept";
+			case 8 -> "huit";
+			case 9 -> "neuf";
+			default -> "Input Error";
+		};
+		
+		System.out.println(s);
+		
+		sc.close();
+	}
+}
