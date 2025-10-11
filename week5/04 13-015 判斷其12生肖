@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		String s = switch(num){
+			case 1 -> "Mouse";
+			case 2 -> "Cow";
+			case 3 -> "Tiger";
+			case 4 -> "Rabbit";
+			case 5 -> "Dragon";
+			case 6 -> "Snake";
+			case 7 -> "Horse";
+			case 8 -> "Sheep";
+			case 9 -> "Monkey";
+			case 10 -> "Chicken";
+			case 11 -> "Dog";
+			case 12 -> "Pig";
+			default -> "Input Error";
+		};
+		
+		System.out.print(s);
+		
+		sc.close();
+	}
+	
+}
