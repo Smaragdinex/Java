@@ -1,0 +1,21 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		double d = new java.util.Scanner(System.in).nextDouble();
+		
+		System.out.println("Please input the size:");
+		
+		int count = 0;
+		
+		for(int i = 0; ; i++)
+		{
+			d /= 2;
+			count++;
+			if(d < 0.00001)
+			{
+				System.out.printf("Totally needs %d times\r\n",count); break;
+			}
+		}
+	}
+}
