@@ -1,0 +1,18 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int n = new java.util.Scanner(System.in).nextInt();
+		
+		int s  = 0;
+		
+		for(int i = 2; ; i++)
+		{
+			s = i*i;
+			if(s % n == 1) 
+			{
+				System.out.println(s); break;
+			}
+		}
+	}
+}
