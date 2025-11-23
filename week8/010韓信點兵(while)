@@ -1,0 +1,17 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int k = new java.util.Scanner(System.in).nextInt();
+		
+		while(true)
+		{
+			if(k%7 == 1 && k%11==9 && k%17==2)
+			{
+				System.out.println(k);
+				break;
+			}
+			k++;
+		}
+	}
+}
