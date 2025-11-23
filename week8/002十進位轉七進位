@@ -1,0 +1,9 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int n = new java.util.Scanner(System.in).nextInt();
+		
+		System.out.print(Integer.toString(n , 7));
+	}
+}
