@@ -1,0 +1,14 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		long n = new java.util.Scanner(System.in).nextLong();
+		
+		while(n%2 == 0)
+		{
+			n /= 2;
+		}
+		
+		System.out.println(n);
+	}
+}
