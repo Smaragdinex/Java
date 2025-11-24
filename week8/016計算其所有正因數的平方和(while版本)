@@ -1,0 +1,22 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int n = new java.util.Scanner(System.in).nextInt();
+		
+		long sum = 0;
+		
+		int i = 1;
+		
+		while(i <= n)
+		{
+			if(n%i == 0)
+			{
+				sum += (long) i*i;
+			}
+			i++;
+		}
+		
+		System.out.print(sum);
+	}
+}
