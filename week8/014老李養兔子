@@ -1,0 +1,20 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
+		
+		for(int i = 0; ; i++)
+		{
+			if(i%7 == a && i%11 == (11-b) && i%17 == c)
+			{
+				System.out.println(i);
+				break;
+			}
+		}
+	}
+}
