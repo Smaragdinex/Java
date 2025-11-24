@@ -1,0 +1,16 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int n = new java.util.Scanner(System.in).nextInt();
+		
+		int sum = 1;
+		
+		for(int i = 1; i <= n; i++)
+		{
+			sum *= i;
+		}
+		
+		System.out.println(sum);
+	}
+}
