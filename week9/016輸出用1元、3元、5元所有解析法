@@ -1,0 +1,17 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int sum = new java.util.Scanner(System.in).nextInt();
+		
+		for(int f = 0; f <= sum / 5; f++)
+		{
+			for(int t = 0; t <= (sum - 5*f)/ 3; t++)
+			{
+				int o = sum - f*5 - t*3;
+				System.out.printf("5 dollar: %d, 3 dollar: %d and 1 dollar: %d\r\n",f,t,o); 
+				
+			}
+		}
+	}
+}
