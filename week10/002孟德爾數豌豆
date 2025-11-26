@@ -1,0 +1,33 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args){  
+		Scanner in = new Scanner(System.in);
+		int a;
+		int b;
+		int c;
+		a= in.nextInt();
+		b= in.nextInt();
+		c= in.nextInt();
+		
+		doMethod(a, b, c);
+	}
+	
+	static void doMethod(int a , int b, int c)
+	{
+		for(int i =0; ; i++)
+		{
+			if(i%a == 2 && i%b == b-1 && i%c == c-2)
+			{
+				System.out.println(i);
+				break;
+			}
+			else 
+			{
+				System.out.println("Impossible!");
+				break;
+			}
+		}
+	}
+}
