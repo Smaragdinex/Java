@@ -1,0 +1,12 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int n = new java.util.Scanner(System.in).nextInt();
+		
+		for(int five = 0; five <= n / 5; five++)
+		{
+			System.out.printf("5 dollar: %d and 1 dollar: %d\r\n",five, n - five* 5);
+		}
+	}
+}
