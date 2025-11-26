@@ -1,0 +1,25 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		int k=in.nextInt();
+		int n=1;
+		
+		while(numDivisor(n)<k)
+			n++;
+		
+		System.out.println(n);	
+	}
+	static int numDivisor(int x)
+	{
+		int count = 0;
+		for(int i = 1; i <= x; i++)
+		{
+			if(x%i == 0) count++;
+		}
+		
+		return count;
+	}
+}
