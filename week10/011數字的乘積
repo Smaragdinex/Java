@@ -1,0 +1,21 @@
+import java.util.*;
+class main
+{
+	public static void main (String args[]) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		System.out.println(doProduct(n));
+	}
+	static int doProduct(int n)
+	{
+		String s = Integer.toString(n);
+		
+		int sum = 1;
+		for(int i = 0; i < s.length(); i++)
+		{
+			sum *= s.charAt(i) - '0';
+		}
+		
+		return sum;
+	}
+}
