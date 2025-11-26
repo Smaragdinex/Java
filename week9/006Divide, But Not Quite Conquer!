@@ -1,0 +1,39 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		while(sc.hasNextInt())
+		{
+			int n = sc.nextInt(), m = sc.nextInt();
+			
+			if(m <= 1 || n < 1)
+			{
+				System.out.println("Boring!");
+				continue;
+			}
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append(n);
+			boolean ok = true;
+			int steps = 0;
+			
+			while(n > 1)
+			{
+				if(n%m != 0)
+				{
+					ok = false;
+					break;
+				}
+				n /= m;
+				steps++;
+				sb.append(' ').append(n);
+			}
+			if(!ok || steps == 0) System.out.println("Boring!");
+			else System.out.println(sb);
+		}
+	}
+}
