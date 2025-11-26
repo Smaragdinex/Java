@@ -1,0 +1,22 @@
+import java.util.*;
+class main
+{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n;
+		n = in.nextInt();
+	    
+		for(int i=1;i<n;i++){
+	        for(int j=1;j<=i;j++){
+	            for(int z=1;z<=j;z++){
+	                if(Pythagorean(i,j,z)) 
+	                	System.out.println(z+" "+j+" "+i);
+	            }
+	        }
+	    }
+	}
+	static boolean Pythagorean(int i, int j, int z)
+	{
+		return (i*i == j*j + z*z);
+	}
+}
