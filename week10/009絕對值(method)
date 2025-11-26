@@ -1,0 +1,16 @@
+import java.util.*;
+class main{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n;
+		
+		n = in.nextInt();
+		
+		System.out.println(ABS(n));
+	}
+	static int ABS(int n)
+	{
+		if(n > 0) return n;
+		else return -n; 
+	}
+}
