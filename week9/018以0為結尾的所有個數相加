@@ -1,0 +1,18 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int sum = 0 , x;
+		
+		while((x = sc.nextInt()) != 0)
+		{
+			sum += x;
+		}
+		
+		System.out.println(sum);
+	}
+}
