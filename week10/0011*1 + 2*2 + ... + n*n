@@ -1,0 +1,16 @@
+import java.util.*;
+	
+class main{	
+	public static void main (String[] args){
+		int n;
+		Scanner in = new Scanner(System.in);
+		
+		n = in.nextInt();
+		System.out.println(doSum(n));
+	}
+	static int doSum(int n)
+	{
+		if(n == 0) return 0;
+		return n * n + doSum(n-1);
+	}
+}
