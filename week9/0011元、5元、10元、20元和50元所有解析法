@@ -1,0 +1,21 @@
+class main
+{
+	public static void main(String[] args)
+	{
+		int n = new java.util.Scanner(System.in).nextInt();
+		
+		for(int fifty = 0; fifty <= n / 50; fifty++)
+		{
+			for(int twenty = 0; twenty <= (n - fifty * 50) / 20; twenty++)
+			{
+				for(int ten = 0; ten <= (n - fifty * 50 - twenty * 20) / 10; ten++)
+				{
+					for(int five = 0; five <= (n - fifty * 50 - twenty * 20 - ten * 10) / 5; five++)
+					{
+						System.out.printf("NT50:%d, NT20:%d, NT10:%d, NT5:%d, NT1:%d.\r\n",fifty,twenty,ten,five,n-(fifty * 50 + twenty * 20 + ten * 10 + five * 5));
+					}
+				}
+			}
+		}
+	}
+}
