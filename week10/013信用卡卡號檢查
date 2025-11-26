@@ -1,0 +1,33 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		long n=in.nextLong();
+		
+		doCheck(n);
+	}
+	static void doCheck(long n)
+	{
+		String s = Long.toString(n);
+		
+		int sum = 0;
+		
+		boolean doubleIt = false;
+		
+		for(int i = s.length() - 1; i >= 0; i--)
+		{
+			int d = s.charAt(i) - '0';
+			if(doubleIt)
+			{
+				d *= 2;
+				if(d > 9) d -= 9;
+			}
+			
+			sum += d;
+			doubleIt = !doubleIt;
+		}
+		
+		System.out.print((sum % 10 == 0) ? "YES" : "NO");
+	}
