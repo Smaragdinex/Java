@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.stream.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[] arr1 = IntStream.range(0,5)
+							.map(i -> sc.nextInt())
+							.sorted()
+							.toArray();
+		int[] arr2 = IntStream.range(0,5)
+								.map(i -> sc.nextInt())
+								.sorted()
+								.toArray();
+								
+		System.out.println(Arrays.equals(arr1,arr2) ? 1 : 0);
+	}
+}
