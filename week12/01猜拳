@@ -1,0 +1,69 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		while(sc.hasNextInt())
+		{
+			int F = sc.nextInt(), N = sc.nextInt();
+			
+			int[] human = new int[N];
+			
+			for(int i = 0; i < human.length; i++)
+			{
+				human[i] = sc.nextInt();
+			}
+			
+			int[] robot = new int[N];
+			robot[0] = F;
+			
+			for(int i = 1; i < N; i++)
+			{
+				if(i >= 2 && human[i - 1] == human[i - 2])
+				{
+					robot[i] = winAgainst(human[i - 1]);
+				}
+				else robot[i] = human[i - 1];
+			}
+			
+			String result = "Drew at round " + N;
+			int stopRound = N;
+			
+			for(int i = 0; i < N; i++)
+			{
+				if(robot[i] == human[i]) continue;
+				if(isWin(robot[i], human[i]))
+				{
+					result = "Won at round " + (i + 1);
+				}
+				else result = "Lost at round " + (i + 1);
+				
+				stopRound = i + 1;
+				break;
+			}
+			
+			for(int i = 0; i < stopRound; i++)
+			{
+				if(i > 0) System.out.print(" ");
+				System.out.print(robot[i]);
+			}
+			System.out.println(" : " + result);
+			
+		}
+	}
+	
+	static int winAgainst(int hand)
+	{
+		if(hand == 0) return 5;
+		if(hand == 2) return 0;
+		return 2;
+	}
+	
+	static boolean isWin(int r, int h)
+	{
+		return (r == 0 && h == 2) || (r == 2 && h == 5) || (r == 5 && h == 0);
+	}
+}
