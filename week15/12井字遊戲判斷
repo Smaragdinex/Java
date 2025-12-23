@@ -1,0 +1,55 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int target = sc.nextInt();
+		
+		int[][] a = new int[3][3];
+		
+		for(int i = 0; i < 3; i++)
+		{
+			for(int j = 0; j < 3; j++)
+			{
+				a[i][j] = sc.nextInt();
+			}
+		}
+		
+		boolean found = false;
+		
+		for(int i = 0; i < 3; i++)
+		{
+			if(a[i][0] == target && a[i][1] == target && a[i][2] == target)
+			{
+				System.out.println("All " + target + "'s on row " + i);
+				found = true;
+			}
+		}
+		
+		for(int j = 0; j < 3; j++)
+		{
+			if(a[0][j] == target && a[1][j] == target && a[2][j] == target)
+			{
+				System.out.println("All " + target + "'s on column " + j);
+				found = true;
+			}
+		}
+		
+		if(a[0][0] == target && a[1][1] == target && a[2][2] == target)
+		{
+			System.out.println("All " + target + "'s on diagonal");
+			found = true;
+		}
+		if(a[0][2] == target && a[1][1] == target && a[2][0] == target)
+		{
+			System.out.println("All " + target + "'s on subdiagonal");
+		}
+		
+		if(!found) System.out.println("There is no line with all " + target);
+		
+		
+	}
+}
