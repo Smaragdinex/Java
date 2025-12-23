@@ -1,0 +1,38 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[][] arr = new int[3][3], rotated = new int[3][3];
+		
+		for(int i = 0; i < arr.length; i++)
+		{
+			for(int j = 0; j < arr[i].length; j++)
+			{
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		
+		for(int i = 0; i < arr.length; i++)
+		{
+			for(int j = 0; j < arr[i].length; j++)
+			{
+				rotated[3 - 1 - j][i] = arr[i][j];
+			}
+		}
+		
+		for(int i = 0; i < rotated.length; i++)
+		{
+			for(int j = 0; j < rotated[i].length; j++)
+			{
+				System.out.printf("%d ", rotated[i][j]);
+			}
+			
+			System.out.println();
+		}
+		
+	}
+}
