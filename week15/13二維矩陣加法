@@ -1,0 +1,44 @@
+import java.util.*;
+
+class main
+{	
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[][] arr1 = new int[4][4], arr2 = new int[4][4], sum = new int[4][4];
+		
+		for(int i = 0; i < arr1.length; i++)
+		{
+			for(int j = 0; j < arr1[i].length; j++)
+			{
+				arr1[i][j] = sc.nextInt();
+			}
+		}
+		
+		for(int i = 0; i < arr2.length; i++)
+		{
+			for(int j = 0; j < arr2[i].length; j++)
+			{
+				arr2[i][j] = sc.nextInt();
+			}
+		}
+		
+		for(int i = 0; i < 4; i++)
+		{
+			for(int j = 0; j < 4; j++)
+			{
+				sum[i][j] = arr1[i][j] + arr2[i][j];
+			}
+		}
+		
+		for(int[] row : sum)
+		{
+			for(int val : row)
+			{
+				System.out.printf("%d ", val);
+			}
+			System.out.println();
+		}
+	}
+}
