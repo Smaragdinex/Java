@@ -1,0 +1,40 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		while(sc.hasNextInt())
+		{
+			list.add(sc.nextInt());
+		}
+		
+		int can = 0, c = 0;
+		
+		for(int x : list)
+		{
+			if(c == 0)
+			{
+				can = x;
+				c = 1;
+			}
+			else
+			{
+				c += x == can ? 1 : -1;
+			}
+		}
+		
+		int count = 0;
+		
+		for(int x : list)
+		{
+			if(x == can) count++;
+		}
+		
+		System.out.println(count > list.size() / 2 ? can: "No");
+	}
+}
