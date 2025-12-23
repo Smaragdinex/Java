@@ -1,0 +1,80 @@
+import java.util.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[][] magic = new int[3][3];
+		
+		for(int i = 0; i < magic.length; i++)
+		{
+			for(int j = 0; j < magic[i].length; j++)
+			{
+				magic[i][j] = sc.nextInt();
+			}
+		}
+		
+		for(int i = 0; i < 3; i++)
+		{
+			for(int j = 0; j < 3; j++)
+			{
+				System.out.printf("%d ", magic[i][j]);
+			}
+			System.out.println();
+		}
+		
+		if(magic[1][1] != 5)
+		{
+			System.out.println("No");
+			return;
+		}
+		
+		boolean[] seen = new boolean[10];
+		for(int i = 0; i < 3; i++)
+		{
+			for(int j = 0; j < 3; j++)
+			{
+				int num = magic[i][j];
+				if(num < 1 || num > 9 || seen[num])
+				{
+					System.out.println("No");
+					return;
+				}
+				seen[num] = true;
+			}
+		}
+		
+		int[] sumRow = new int[3], sumCol = new int[3];
+		int diag1 = 0, diag2 = 0;
+		
+		for(int i = 0; i < 3; i++)
+		{
+			for(int j = 0; j < 3; j++)
+			{
+				sumRow[i] += magic[i][j];
+				sumCol[j] += magic[i][j];
+				if(i == j) diag1 += magic[i][j];
+				if(i + j == 2) diag2 += magic[i][j];
+			}
+		}
+		
+		for(int i = 0; i < 3; i++)
+		{
+			if(sumRow[i] != 15 || sumCol[i] != 15)
+			{
+				System.out.println("No");
+				return;
+			}
+		}
+		
+		if(diag1 != 15 || diag2 != 15)
+		{
+			System.out.println("No");
+			return;
+		}
+		
+		System.out.println("Yes");
+	}
+}
