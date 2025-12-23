@@ -1,0 +1,18 @@
+import java.util.*;
+import java.util.stream.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[] arr = IntStream.range(0,100)
+							.map(i -> sc.nextInt())
+							.toArray();
+		for(int i = 99; i >=0; i--)
+		{
+			System.out.print(" " + arr[i]);
+		}
+	}
+}
