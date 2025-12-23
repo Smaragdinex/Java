@@ -1,0 +1,20 @@
+import java.util.*;
+import java.util.stream.*;
+
+class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int[] arr = IntStream.range(0,3)
+							.map(i -> sc.nextInt())
+							.sorted()
+							.toArray();
+							
+		for(int x : arr)
+		{
+			System.out.printf("%d ", x);
+		}
+	}
+}
