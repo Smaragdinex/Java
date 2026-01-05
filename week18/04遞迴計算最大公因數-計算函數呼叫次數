@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class main
+{
+	static int count = 0;
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("x=");
+		int x = sc.nextInt();
+		System.out.println("y=");
+		int y = sc.nextInt();
+		
+		int result = gcd(x , y);
+		System.out.printf("There are %d times function call\r\n", count);
+		System.out.printf("gcd(%d,%d) = %d\r\n", x, y, gcd(x, y));
+	}
+	static int gcd(int x, int y)
+	{
+		count++;
+		if(x < 0) return gcd(y , -x);
+		if(x > y) return gcd(y, x);
+		if(x == 0) return y;
+		return gcd(y%x, x);
+	}
+}
