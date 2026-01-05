@@ -1,0 +1,61 @@
+import java.util.*;
+import java.text.*;
+
+public class main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		double result = a(n);
+		
+		String s = "a(" + n + ")=" + toFiveDecimal(result);
+		
+		s = removeZero(new StringBuilder(s));
+		
+		System.out.println();
+		System.out.print(s);
+	}
+	
+	static double a(int n)
+	{
+		if(n == 1) return 3;
+		
+		return (4 * a(n - 1) + 1) / 5.0;
+	}
+	
+	static String toFiveDecimal(double num)
+	{
+		long scaled = Math.round(num * 100000);
+		String s = String.valueOf(scaled);
+		
+		s = padZeros(s, 6);
+		
+		return s.substring(0, s.length() - 5) + "." + s.substring(s.length() - 5);
+	}
+	
+	static String padZeros(String s, int targetLen)
+	{
+		if(s.length() >= targetLen) return s;
+		return padZeros("0" + s, targetLen);
+	}
+	
+	static String removeZero(StringBuilder sb)
+	{
+		int len = sb.length();
+		if(len == 0) return sb.toString();
+		
+		char last = sb.charAt(len - 1);
+		if(last == '0')
+		{
+			sb.deleteCharAt(len - 1);
+			return removeZero(sb);
+		}
+		if(last == '.')
+		{
+			sb.deleteCharAt(len - 1);
+			return sb.toString();
+		}
+		return sb.toString();
+	}
+}
